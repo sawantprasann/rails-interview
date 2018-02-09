@@ -69,7 +69,7 @@ single-page application.  You may use any of the following frameworks:
 
 1. Backbone with or without Marionette
 1. AngularJS 1.x
-1. ReactJS
+1. Angular 2+
 
 We have several JavaScript applications in production with a few different
 frameworks, so this part is important to us.  Structure this JS
