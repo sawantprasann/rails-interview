@@ -1188,3 +1188,350 @@ Processing by StudentsController#index as HTML
   Rendered students/index.html.erb within layouts/application (1.9ms)
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 14:47:33', '2019-01-12 14:47:33', 51848956)[0m
+  [1m[35m (86.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 20:17:34 +0530
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 20:17:34 +0530
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 20:17:34 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:15:58', '2019-01-12 15:15:58', 51848956)[0m
+  [1m[35m (88.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 20:45:58 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 20:45:58 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 20:45:58 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (23.7ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:35:40', '2019-01-12 15:35:40', 51848956)[0m
+  [1m[35m (78.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:05:41 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:05:41 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:05:41 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 113629430)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:40:27', '2019-01-12 15:40:27', 51848956)[0m
+  [1m[35m (110.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:10:27 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:10:27 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:10:27 +0530
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:42:52', '2019-01-12 15:42:52', 51848956)[0m
+  [1m[35m (91.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:12:52 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:12:52 +0530
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:12:52 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 298486374)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 281110143)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:51:48', '2019-01-12 15:51:48', 51848956)[0m
+  [1m[35m (126.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:21:48 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+  [1m[35mStudent Load (0.6ms)[0m  SELECT "students".* FROM "students" WHERE (lower(favoritemovie) = 'taboo')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  Rendered students/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 977ms (Views: 961.1ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:21:49 +0530
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')[0m
+  Rendered students/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:21:49 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')
+  Rendered students/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 15:56:50', '2019-01-12 15:56:50', 51848956)[0m
+  [1m[35m (120.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:26:51 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')
+  Rendered students/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 439ms (Views: 422.8ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:26:51 +0530
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')[0m
+  Rendered students/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:26:51 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE (lower(favoritemovie) = 'taboo')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.4ms)[0m  [1mDELETE FROM "students"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Butler', 'Onion Soup', 'Yellow', 'Orange County', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Jimmy', 'Garrapolo', 'Tempura shrimp', 'Thistle', 'Taboo', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Tom', 'Brady', 'Eggs', 'Elmer', 'Elysium', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 113629430)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Kobe', 'Bryant', 'Rottini', 'Red', 'Radio', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 281110143)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Shaquille', 'O''Neal', 'Veal', 'Violet', 'V for Vendetta', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 1018350795)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "students" ("firstname", "lastname", "favoritefood", "favoritecolor", "favoritemovie", "created_at", "updated_at", "id") VALUES ('Joey', 'Galloway', 'Onion Soup', 'Red', 'Taboo', '2019-01-12 16:24:01', '2019-01-12 16:24:01', 51848956)[0m
+  [1m[35m (274.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+StudentFlowsTest: test_duplicate_first_names_have_first_initial_of_last_name_appended
+-------------------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:54:02 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')
+  Rendered students/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 2772ms (Views: 2690.5ms | ActiveRecord: 1.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StudentFlowsTest: test_names_filterable_by_movie
+------------------------------------------------
+Started GET "/students?movie=taboo" for 127.0.0.1 at 2019-01-12 21:54:05 +0530
+Processing by StudentsController#index as HTML
+  Parameters: {"movie"=>"taboo"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE (lower(favoritemovie) = 'taboo')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  Rendered students/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+StudentFlowsTest: test_by_default_the_firstname_of_the_student_is_displayed
+---------------------------------------------------------------------------
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:54:05 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Joey')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Tom')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Kobe')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Jimmy')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Shaquille')
+  Rendered students/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

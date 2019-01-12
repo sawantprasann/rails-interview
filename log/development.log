@@ -38,3 +38,293 @@ Processing by StudentsController#index as HTML
   [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"
   Rendered students/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 390ms (Views: 386.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 21:22:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/railties-4.2.5.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 55ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:23:02 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 630ms (Views: 623.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-12 21:23:02 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-01-12 21:23:02 +0530
+
+
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:24:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'prasann')[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Teju')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  Rendered students/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 466ms (Views: 447.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 21:47:00 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/railties-4.2.5.1/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:47:09 +0530
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.9ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'prasann')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Teju')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')[0m
+  Rendered students/index.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (couldn't find file 'angular/angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/pinkal/rails_workspace/rails-interview/app/assets/images
+  /home/pinkal/rails_workspace/rails-interview/app/assets/javascripts
+  /home/pinkal/rails_workspace/rails-interview/app/assets/stylesheets
+  /home/pinkal/rails_workspace/rails-interview/vendor/assets/javascripts
+  /home/pinkal/rails_workspace/rails-interview/vendor/assets/stylesheets
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    3: <head>
+    4:   <title>Interview</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:16
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2777908220980641000_35943680'
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.0ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (281.3ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (357.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 21:50:33 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/railties-4.2.5.1/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:50:37 +0530
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (56.7ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'prasann')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Teju')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  Rendered students/index.html.erb within layouts/application (61.9ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 57.4ms)
+
+ActionView::Template::Error (couldn't find file 'angular/angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/pinkal/rails_workspace/rails-interview/app/assets/images
+  /home/pinkal/rails_workspace/rails-interview/app/assets/javascripts
+  /home/pinkal/rails_workspace/rails-interview/app/assets/stylesheets
+  /home/pinkal/rails_workspace/rails-interview/vendor/assets/javascripts
+  /home/pinkal/rails_workspace/rails-interview/vendor/assets/stylesheets
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    3: <head>
+    4:   <title>Interview</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:16
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2777908220980641000_35943680'
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.1ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-01-12 21:54:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'prasann')[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Teju')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  Rendered students/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 1508ms (Views: 1489.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/angular.self-78d77e4a3c91d5788f4be38711bc43955307738d52116f065bc1289f6abc3523.js?body=1" for 127.0.0.1 at 2019-01-12 21:54:11 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2019-01-12 21:54:11 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-12 21:54:11 +0530
+
+
+Started GET "/students.js" for 127.0.0.1 at 2019-01-12 21:54:19 +0530
+Processing by StudentsController#index as JS
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (139.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (205.5ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:54:23 +0530
+Processing by StudentsController#index as JSON
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template students/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/pinkal/rails_workspace/rails-interview/app/views"
+):
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (37.4ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (53.7ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:55:17 +0530
+Processing by StudentsController#index as JSON
+  Rendered students/index.json.jbuilder (44.9ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:55:54 +0530
+Processing by StudentsController#index as JSON
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.json.jbuilder (99.8ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x00000003da3b50>:0x007f7ac40a1400>
+Did you mean?  student_url
+               @students):
+    1: json.extract! student, :id, :name, :favoritemovie, :favoritefood, :favoritecolor
+  app/views/students/index.json.jbuilder:1:in `_app_views_students_index_json_jbuilder___1320981422951748157_70082625863740'
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.7ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:56:11 +0530
+Processing by StudentsController#index as JSON
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.json.jbuilder (14.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `id' for #<Student::ActiveRecord_Relation:0x007f7ac48f9a80>
+Did you mean?  ids):
+    1: json.extract! @students, :id, :name, :favoritemovie, :favoritefood, :favoritecolor
+  app/views/students/index.json.jbuilder:1:in `_app_views_students_index_json_jbuilder___1320981422951748157_70082630138840'
+  app/controllers/students_controller.rb:7:in `index'
+
+
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.8ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.1ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pinkal/.rvm/gems/ruby-2.3.3@globant/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.2ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:57:37 +0530
+Processing by StudentsController#index as JSON
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/_student.json.jbuilder (0.4ms)
+  Rendered students/_student.json.jbuilder (0.0ms)
+  Rendered students/_student.json.jbuilder (0.0ms)
+  Rendered students/_student.json.jbuilder (0.0ms)
+  Rendered students/index.json.jbuilder (4.9ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students.json" for 127.0.0.1 at 2019-01-12 21:57:54 +0530
+Processing by StudentsController#index as JSON
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'prasann')[0m
+  Rendered students/_student.json.jbuilder (2.1ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  Rendered students/_student.json.jbuilder (2.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Teju')[0m
+  Rendered students/_student.json.jbuilder (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "students" WHERE ("students"."firstname" LIKE 'Nikhil')
+  Rendered students/_student.json.jbuilder (3.2ms)
+  Rendered students/index.json.jbuilder (16.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 1.1ms)
