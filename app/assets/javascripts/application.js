@@ -13,5 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
 //= require angular
+//= require angular-rails-templates
+//= require angular-ui-router
+//= require angular-resource
+
+
+// require main
+// require student.service
+// require components/app.component
+// require components/studentList.component
+
+// require app
+
 //= require_tree .
